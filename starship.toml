@@ -1,0 +1,175 @@
+# My Starship Prompt Config
+
+format = """
+[](#3B4252)\
+$username\
+[](bg:#434C5E fg:#3B4252)\
+$directory\
+[](bg:#4C566A fg:#434C5E)\
+$git_branch\
+$git_status\
+[](bg:#86BBD8 fg:#4C566A)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$lua\
+$nodejs\
+$nim\
+$nix_shell\
+$package\
+$perl\
+$php\
+$python\
+$ruby\
+$rust\
+$scala\
+[](bg:#06969A fg:#86BBD8)\
+$docker_context\
+[](bg:#33658A fg:#06969A)\
+$time\
+[ ](fg:#33658A)\
+"""
+command_timeout = 5000
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#3B4252"
+style_root = "bg:#3B4252"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#434C5E"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:#4C566A"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#4C566A"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = "󰢱 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nix_shell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[package]
+symbol = "󰏗 "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[perl]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+pyenv_version_name = false
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+
+[ruby]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:#33658A"
+format = '[ $time ]($style)'
