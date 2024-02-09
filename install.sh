@@ -35,7 +35,7 @@ pacman -S ripgrep fd neovim --noconfirm
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-pacman -S npm flatpak cargo go python3-pip pipx --noconfirm
+pacman -S npm flatpak cargo go python3-pip python-pipx --noconfirm
 
 echo "###############"
 echo "## XDG Stuff ##"
