@@ -9,15 +9,6 @@ echo "########################################"
 mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/history-bash ~/.cache/history-zsh
 
-echo "#########################"
-echo "## Shell Color Scripts ##"
-echo "#########################" 
-cd ~/Github
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-cd ~
-
 echo "####################"
 echo "## Installing Yay ##"
 echo "####################" 
@@ -63,7 +54,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
+mv -v xfce4 Thunar waybar neofetch git nvim lf hypr kitty rofi starship.toml mimeapps.list ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc ~/.bash_profile
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .bash_profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
@@ -121,10 +112,19 @@ chmod a+x ./setup.sh
 ./setup.sh
 rm -f ./setup.sh
 
+echo "#########################"
+echo "## Shell Color Scripts ##"
+echo "#########################" 
+cd ~/Github
+git clone https://gitlab.com/dwt1/shell-color-scripts.git
+cd shell-color-scripts
+sudo make install
+cd ~
+
 echo "##################"
 echo "## Yay Programs ##"
 echo "##################"
-yay -S vscodium-bin swaylock-effects rofi-lbonn-wayland-git brave-bin autojump hollywood swaync 
+yay -S vscodium-bin swaylock-effects rofi-lbonn-wayland-git brave-bin autojump hollywood swaync tty-clock
 
 echo "##################"
 echo "## Flatpak Repo ##"
