@@ -6,15 +6,8 @@ builddir=$(pwd)
 echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
-mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
+mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/history-bash ~/.cache/history-zsh
-
-echo "#################"
-echo "## Envycontrol ##"
-echo "#################"
-cd ~/Github
-git clone https://github.com/bayasdev/envycontrol.git
-cd ~
 
 echo "#########################"
 echo "## Shell Color Scripts ##"
@@ -25,72 +18,19 @@ cd shell-color-scripts
 sudo make install
 cd ~
 
-echo "################"
-echo "## Rofi Emoji ##"
-echo "################" 
+echo "####################"
+echo "## Installing Yay ##"
+echo "####################" 
 cd ~/Github
-git clone https://github.com/Mange/rofi-emoji.git
-cd rofi-emoji
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
-
-echo "###############"
-echo "## Rofi Calc ##"
-echo "###############" 
-cd ~/Github
-git clone https://github.com/svenstaro/rofi-calc.git
-cd rofi-calc
-mkdir m4
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
-
-echo "######################"
-echo "## Picom Animations ##"
-echo "######################"
-cd ~/Github
-git clone https://github.com/FT-Labs/picom.git
-cd picom
-git submodule update --init --recursive
-meson setup --buildtype=release . build
-ninja -C build
-sudo ninja -C build install
-cd ~
-
-echo "#############"
-echo "## Bashtop ##"
-echo "#############"
-cd ~/Github
-git clone https://github.com/aristocratos/bashtop.git
-cd bashtop
-sudo make install
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
 cd ~
 
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
 go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
-
-echo "############"
-echo "## Rustup ##"
-echo "############" 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-echo "##################"
-echo "## Neovim Setup ##"
-echo "##################" 
-cargo install bob-nvim
-bob install stable
-bob use stable
 
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
@@ -124,8 +64,8 @@ mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
-rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
-mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
+rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc ~/.bash_profile
+mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .bash_profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
 
 echo "#################"
@@ -138,9 +78,6 @@ git clone https://github.com/zsh-users/zsh-completions.git
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
 git clone https://github.com/hlissner/zsh-autopair.git
 cd ~
-
-# adding ur usr to libvirt group
-sudo usermod -aG libvirt "$(whoami)"
 
 echo "###################"
 echo "## Cursors Theme ##"
@@ -175,14 +112,6 @@ cd gedit
 ./install.sh
 cd ~
 
-echo "###############"
-echo "## Greenclip ##"
-echo "###############"
-cd ~/.local/bin
-wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
-chmod a+x greenclip 
-cd ~
-
 echo "###########"
 echo "## Nitch ##"
 echo "###########"
@@ -193,6 +122,11 @@ chmod a+x ./setup.sh
 rm -f ./setup.sh
 
 echo "##################"
+echo "## Yay Programs ##"
+echo "##################"
+yay -S vscodium-bin swaylock-effects rofi-lbonn-wayland-git brave-bin autojump hollywood swaync 
+
+echo "##################"
 echo "## Flatpak Repo ##"
 echo "##################"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -200,4 +134,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install com.obsproject.Studio io.github.arunsivaramanneo.GPUViewer org.fedoraproject.MediaWriter com.chatterino.chatterino net.brinkervii.grapejuice net.lutris.Lutris org.yuzu_emu.yuzu com.github.tchx84.Flatseal com.valvesoftware.Steam org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord org.winehq.Wine com.usebottles.bottles net.davidotek.pupgui2
+flatpak install org.fedoraproject.MediaWriter net.brinkervii.grapejuice com.github.tchx84.Flatseal xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord 
