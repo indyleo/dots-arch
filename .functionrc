@@ -44,7 +44,7 @@ mkdirg() {
 
 # Better Pacman
 pac() { 
-  if [[ "$1" == "-S" || "$1" == "-Syu" || "$1" == "-S" || "$1" == "-Rns" ]]; then
+  if [[ "$1" == "-S" || "$1" == "-Syu" || "$1" == "-Rns" ]]; then
     command sudo pacman "$@"
   else
     if [[ "$1" == "" ]]; then
