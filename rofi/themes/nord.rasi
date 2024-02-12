@@ -34,7 +34,7 @@
     
     highlight:     underline bold #eceff4;
 
-    transparent: #902E3440;
+    transparent: #702E3440;
 }
 
 window {
