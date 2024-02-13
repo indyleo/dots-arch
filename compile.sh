@@ -134,4 +134,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install org.fedoraproject.MediaWriter net.brinkervii.grapejuice com.github.tchx84.Flatseal xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord 
+flatpak install net.lutris.Lutris org.fedoraproject.MediaWriter net.brinkervii.grapejuice com.github.tchx84.Flatseal xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord 
