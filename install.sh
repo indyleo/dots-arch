@@ -19,7 +19,7 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 pacman -S direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks lf shellcheck python3-venv meson exa stow qalc cmdtest qalc libtool libtool-bin ninja-build \
-  autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 \
+  autoconf automake python3-pil bat flake8 jq poppler odt2txt highlight catdoc docx2txt genisoimage exiftool-perl libmagic-dev libmagic1 \
   brightnessctl --noconfirm
 
 echo "##################"
