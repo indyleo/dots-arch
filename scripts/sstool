@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+cursorpos=$(hyprctl cursorpos | cut -d, -f 1)
+ 
+ssfull() {
+  if [ $cursorpos -ge 1366 ]; then
+    grim -g "2560,0 1366x768" ~/Pictures/Screenshots/$(date +'screenshot_fullscreen_%Y-%m-%d-%H%M%S.png'); wl-copy < ~/Pictures/Screenshots/screenshot_fullscreen_$(date +'%Y-%m-%d-%H%M%S').png
+  else
+    grim -g "0,0 1366x768" ~/Pictures/Screenshots/$(date +'screenshot_fullscreen_%Y-%m-%d-%H%M%S.png'); wl-copy < ~/Pictures/Screenshots/screenshot_fullscreen_$(date +'%Y-%m-%d-%H%M%S').png
+  fi
+}
+
+ssselc() {
+  grim -g "$(slurp -d)" ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png'); 
+  wl-copy < ~/Pictures/Screenshots/screenshot_$(date +'%Y-%m-%d-%H%M%S').png
+}
+
+case "$1" in
+  --screen)
+    ssfull ;;
+  --selec)
+    ssselc ;;
+  *)
+    echo "Unkown Arg" ;;
+esac
