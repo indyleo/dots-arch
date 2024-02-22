@@ -17,9 +17,9 @@ pacman -Syu
 echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
-pacman -S direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
-  python3-setuptools autojump luarocks lf shellcheck python3-venv meson exa stow qalc cmdtest qalc libtool libtool-bin ninja-build \
-  autoconf automake python3-pil bat flake8 jq poppler odt2txt highlight catdoc docx2txt genisoimage exiftool-perl libmagic-dev libmagic1 \
+pacman -S direnv yad fzf locate github-cli tree base-devel git cmake make hidapi gnupg openssl tldr trash-cli gcc wget curl python3 unzip tar \
+  python-setuptools luarocks lf shellcheck meson eza stow python-markdown yarn libtool ninja \
+  autoconf automake python-pillow bat flake8 jq poppler odt2txt highlight catdoc docx2txt perl-image-exiftool imagemagick \
   brightnessctl --noconfirm
 
 echo "##################"
@@ -35,7 +35,7 @@ pacman -S ripgrep fd neovim --noconfirm
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-pacman -S npm flatpak cargo go python3-pip python-pipx --noconfirm
+pacman -S npm flatpak cargo go python-pip python-pipx --noconfirm
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -62,11 +62,6 @@ echo "## Installing Shell Stuff ##"
 echo "############################"
 pacman -S bash bash-completion zsh zsh-syntax-highlighting --noconfirm
 
-echo "#####################"
-echo "## Insalling Java ##"
-echo "#####################"
-pacman -S openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre openjdk-19-jdk openjdk-19-jre openjdk-20-jdk openjdk-20-jre gradle --noconfirm
-
 echo "#################################"
 echo "## Installing Bittorrent Stuff ##"
 echo "#################################"
@@ -75,7 +70,7 @@ pacman -S transmission transmission-cli transmission-gtk --noconfirm
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-pacman -S  galculator kitty bleachbit dconf-editor gedit gedit-plugins gparted --noconfirm
+pacman -S  qalculate-gtk kitty bleachbit dconf-editor gedit gedit-plugins gparted --noconfirm
 
 echo "############################"
 echo "## Installing Media Stuff ##"
@@ -107,10 +102,10 @@ echo "## Installing Office Stuff ##"
 echo "#############################"
 pacman -S libreoffice-fresh zathura --noconfirm
 
-echo "########################"
-echo "## Installing Drivers ##"
-echo "########################"
-pacman -S mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-samples firmware-misc-nonfree --noconfirm
+echo "###########################"
+echo "## Installing Mesa-Utils ##"
+echo "###########################"
+pacman -S mesa-utils --noconfirm
 
 echo "######################"
 echo "## Installing Fonts ##"
