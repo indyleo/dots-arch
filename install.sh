@@ -70,7 +70,7 @@ pacman -S transmission transmission-cli transmission-gtk --noconfirm
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-pacman -S  qalculate-gtk kitty bleachbit dconf-editor gedit gedit-plugins gparted --noconfirm
+pacman -S  qalculate-gtk kitty bleachbit dconf-editor gedit gedit-plugins gparted neovide --noconfirm
 
 echo "############################"
 echo "## Installing Media Stuff ##"

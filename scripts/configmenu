@@ -8,24 +8,24 @@ chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv 
 case "$chosen" in
 
 # Cli Or Tui Configs
-  "Kitty Config") kitty -e nvim $XDG_CONFIG_HOME/kitty/kitty.conf ;;
-	"Bash Config") kitty -e nvim $HOME/.bashrc ;;
-	"Zsh Config") kitty -e nvim $HOME/.zshrc ;;
-	"Env Config") kitty -e nvim $HOME/.zshenv ;;
-	"Alias Config") kitty -e nvim $HOME/.aliasrc ;;
-	"Functions Config") kitty -e nvim $HOME/.functionrc ;;
-	"Profile Config") kitty -e nvim $HOME/.profile ;;
-	"Starship Config") kitty -e nvim $XDG_CONFIG_HOME/starship.toml ;;
-	"Neovim Config") kitty -e nvim $XDG_CONFIG_HOME/nvim/init.lua ;;
-	"Neofetch Config") kitty -e nvim $XDG_CONFIG_HOME/neofetch/config.conf ;;
-	"Lf Config") kitty -e nvim $XDG_CONFIG_HOME/lf/lfrc ;;
+  "Kitty Config") neovide $XDG_CONFIG_HOME/kitty/kitty.conf ;;
+	"Bash Config") neovide $HOME/.bashrc ;;
+	"Zsh Config") neovide $HOME/.zshrc ;;
+	"Env Config") neovide $HOME/.zshenv ;;
+	"Alias Config") neovide $HOME/.aliasrc ;;
+	"Functions Config") neovide $HOME/.functionrc ;;
+	"Profile Config") neovide $HOME/.profile ;;
+	"Starship Config") neovide $XDG_CONFIG_HOME/starship.toml ;;
+	"Neovim Config") neovide $XDG_CONFIG_HOME/nvim/init.lua ;;
+	"Neofetch Config") neovide $XDG_CONFIG_HOME/neofetch/config.conf ;;
+	"Lf Config") neovide $XDG_CONFIG_HOME/lf/lfrc ;;
 
 # GUI Configs
-	"Hyprland Config") kitty -e nvim $XDG_CONFIG_HOME/hypr/hyprland.conf ;;
-	"Waybar Config") kitty -e nvim $XDG_CONFIG_HOME/waybar/config ;;
-	"Waybar Style") kitty -e nvim $XDG_CONFIG_HOME/waybar/style.css ;;
-	"Rofi Config") kitty -e nvim $XDG_CONFIG_HOME/rofi/config.rasi ;;
-  "Mimeapps List Config") kitty -e nvim $XDG_CONFIG_HOME/mimeapps.list ;;
+	"Hyprland Config") neovide $XDG_CONFIG_HOME/hypr/hyprland.conf ;;
+	"Waybar Config") neovide $XDG_CONFIG_HOME/waybar/config ;;
+	"Waybar Style") neovide $XDG_CONFIG_HOME/waybar/style.css ;;
+	"Rofi Config") neovide $XDG_CONFIG_HOME/rofi/config.rasi ;;
+  "Mimeapps List Config") neovide $XDG_CONFIG_HOME/mimeapps.list ;;
 
 # If Non Chosen Exit
 	*) exit 1 ;;

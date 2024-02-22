@@ -55,6 +55,7 @@ mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 Thunar waybar neofetch git nvim lf hypr kitty rofi starship.toml mimeapps.list ~/.config/
+mv -v desktopfiles/* ~/.local/share/applications
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc ~/.bash_profile
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .bash_profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
@@ -73,7 +74,7 @@ cd ~
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################" 
-mkdir -v ~/.icons
+mkdir -v ~/.local/share/icons
 cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
@@ -83,13 +84,14 @@ cd ~
 echo "#################"
 echo "## Icons Theme ##"
 echo "#################" 
-wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
+mv -v icons/* ~/.local/share/icons/Papirus-Dark/128x128/apps
 
 echo "###############"
 echo "## GTK Theme ##"
 echo "###############" 
-mkdir -v ~/.themes
-cd ~/.themes
+mkdir -v ~/.local/share/themes
+cd ~/.local/share/themes
 git clone https://github.com/EliverLara/Nordic.git
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 cd ~
