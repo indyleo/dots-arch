@@ -2,7 +2,7 @@
 # My rofi config menu to quickly edit some config files
 
 # What's Shown To The User
-chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nHyprland Config\nWaybar Config\nWaybar Style\nRofi Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 21;}")
+chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Config\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nHyprland Config\nWaybar Config\nWaybar Style\nRofi Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 21;}")
 
 # Open What Is Chosen
 case "$chosen" in
