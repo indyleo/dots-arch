@@ -60,7 +60,9 @@ pacman -S btop bpytop htop bashtop --noconfirm
 echo "############################"
 echo "## Installing Shell Stuff ##"
 echo "############################"
-pacman -S bash bash-completion zsh zsh-syntax-highlighting --noconfirm
+pacman -S bash bash-completion dash zsh zsh-syntax-highlighting --noconfirm
+ln -sfT /bin/dash /bin/sh
+ln -sfT /usr/bin/dash /usr/bin/sh
 
 echo "#################################"
 echo "## Installing Bittorrent Stuff ##"
