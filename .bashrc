@@ -45,13 +45,13 @@ fi
 
 # Some Nice Exports
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL="neovide"
 export PAGER="less"
 export MANPAGER="less"
 export TERM="xterm-256color"
 export TERMINAL="kitty"
 export COLORTERM="truecolor"
-export WM="AwesomeWM"
+export WM="Hyprland"
 export BROWSER="brave-browser"
 export OPENER="xdg-open"
 export READER="zathura"
