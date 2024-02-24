@@ -52,6 +52,11 @@ echo "## USB Utils ##"
 echo "###############"
 pacman -S udiskie udisks2 --noconfirm
 
+echo "###################"
+echo "## Battery Utils ##"
+echo "###################"
+pacman -S tlp tlp-rdw smartmontools --noconfirm
+
 echo "######################"
 echo "## Resource Monitor ##"
 echo "######################"
