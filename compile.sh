@@ -54,6 +54,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
+git clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v xfce4 Thunar waybar neofetch git nvim lf hypr kitty rofi starship.toml mimeapps.list user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc ~/.bash_profile
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .bash_profile .xsession .Xresources ~/
