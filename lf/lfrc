@@ -54,6 +54,11 @@ map ag targz
 map ab targz
 map au unarchive
 
+# Trash
+map bv trash-view
+map be trash-empty
+map br trash-restore
+
 # Jumping Around The Filesystem
 map gh :cd ~
 map gc :cd ~/.config
@@ -214,10 +219,4 @@ cmd fzf_jump ${{
   fi
   lf -remote "send $id $cmd \"$res\""
   clear
-}}
-
-# Wallpaper
-cmd setbg %{{
-  cp "$f" ~/.config/wall.png
-  xwallpaper --stretch "$f"
 }}
