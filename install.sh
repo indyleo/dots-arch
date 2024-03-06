@@ -82,7 +82,7 @@ pacman -S  qalculate-gtk kitty bleachbit dconf-editor gedit gedit-plugins gparte
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
-pacman -S rhythmbox cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg --noconfirm
+pacman -S rhythmbox playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg --noconfirm
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
