@@ -85,7 +85,7 @@ map X !"$f"
 cmd open ${{
   clear
   case $(file --mime-type "$f" -bL) in
-    text/*|application/json) EDITOR="nvim" $EDITOR "$f" ;;
+    text/*|application/json) EDITOR="nvim"; $EDITOR "$f" ;;
     *) $OPENER "$f" ;;
   esac
   clear
