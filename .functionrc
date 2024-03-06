@@ -42,16 +42,16 @@ mkdirg() {
 	cd "$1"
 }
 
-# APT To Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
+# Better Pacman
+pac() { 
+  if [[ "$1" == "-S" || "$1" == "-Syu" || "$1" == "-Rns" ]]; then
+    command sudo pacman "$@"
   else
-    command sudo "$@"
+    if [[ "$1" == "" ]]; then
+      command pacman -h
+    else
+      command pacman "$@"
+    fi
   fi
 }
 
