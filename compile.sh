@@ -125,7 +125,7 @@ cd ~
 echo "##################"
 echo "## Yay Programs ##"
 echo "##################"
-echo "y" | yay -S -noprovides --answerdiff None --answerclean None --mflags "--noconfirm" cava vscodium-bin swaylock-effects rofi-lbonn-wayland-git brave-bin autojump hollywood swaync tty-clock
+yay -S --answerdiff None --answerclean None --mflags "--noconfirm" cava vscodium-bin swaylock-effects rofi-lbonn-wayland-git brave-bin autojump hollywood swaync tty-clock
 
 echo "##################"
 echo "## Flatpak Repo ##"
