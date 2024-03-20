@@ -65,7 +65,7 @@ pacman -S btop bpytop htop bashtop --noconfirm
 echo "############################"
 echo "## Installing Shell Stuff ##"
 echo "############################"
-pacman -S bash bash-completion dash zsh zsh-syntax-highlighting --noconfirm
+pacman -S bash bash-completion dash zsh zsh-syntax-highlighting starship --noconfirm
 ln -sfT /bin/dash /bin/sh
 ln -sfT /usr/bin/dash /usr/bin/sh
 
@@ -138,8 +138,3 @@ echo "############"
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch 
 chmod a+x pfetch
 mv -v pfetch /usr/bin/
-
-echo "#####################"
-echo "## Starship Prompt ##"
-echo "#####################"
-curl -sS https://starship.rs/-S.sh | sh
