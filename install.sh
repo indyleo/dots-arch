@@ -20,7 +20,7 @@ echo "#######################"
 pacman -S direnv yad fzf locate github-cli tree base-devel git cmake make hidapi gnupg openssl tldr trash-cli gcc wget curl python3 unzip tar \
   python-setuptools luarocks lf shellcheck meson eza stow python-markdown yarn libtool ninja \
   autoconf automake python-pillow bat flake8 jq poppler odt2txt highlight catdoc docx2txt perl-image-exiftool imagemagick \
-  brightnessctl --noconfirm
+  brightnessctl man --noconfirm
 
 echo "##################"
 echo "## Wifi Manager ##"
