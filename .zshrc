@@ -83,7 +83,7 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.functionrc" ] && source "$HOME/.functionrc"
 
 # lfcd
-bindkey -s '^x' 'lfcd\n'
+bindkey -s '^x' 'lc\n'
 
 # Starship prompt
 eval "$(starship init zsh)"
