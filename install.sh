@@ -97,7 +97,7 @@ pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-pacman -S waybar --noconfirm
+pacman -S waybar cliphist --noconfirm
 
 echo "##########################"
 echo "## Installing Hyprland ##"
