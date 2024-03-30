@@ -30,7 +30,7 @@ pacman -S network-manager nm-applet --noconfirm
 echo "##################"
 echo "## Text Editors ##"
 echo "##################"
-pacman -S ripgrep fd neovim --noconfirm
+pacman -S ripgrep fd neovim nano --noconfirm
 
 echo "##################"
 echo "## Pkg Managers ##"
