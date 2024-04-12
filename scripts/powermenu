@@ -9,6 +9,6 @@ case "$chosen" in
 	"  Shudown") systemctl poweroff ;;
 	"  Restart") systemctl reboot ;;
 	"󰍃  Log Out") loginctl terminate-session $XDG_SESSION_ID ;;
-	"  Lock") i3lock-fancy -g ;;
+	"  Lock") swaylock ;;
 	*) exit 1 ;;
 esac
