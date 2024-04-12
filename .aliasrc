@@ -53,10 +53,6 @@ alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
-# Xresources Aliases
-alias load='xrdb -load $HOME/.Xresources'
-alias merge='xrdb -merge $HOME/.Xresources'
-
 # CD Aliases
 alias home='cd ~'
 alias conf='cd ~/.config'
