@@ -42,18 +42,30 @@ mkdirg() {
 	cd "$1"
 }
 
-# Better Pacman
-pac() { 
-  if [[ "$1" == "-S" || "$1" == "-Syu" || "$1" == "-Rns" ]]; then
-    command sudo pacman "$@"
-  else
-    if [[ "$1" == "" ]]; then
-      command pacman -h
+# Better Pkg Manager 
+if [ -f /usr/bin/apt ]; then
+  apt() { 
+    command nala "$@"
+  }
+  sudo() {
+    if [ "$1" = "apt" ]; then
+      shift
+      command sudo nala "$@"
     else
-      command pacman "$@"
+      command sudo "$@"
     fi
-  fi
-}
+  }
+elif [ -f /usr/bin/pacman ]; then
+  pac() {
+    case "$1" in
+      -S|-Syu|-Rns) command sudo pacman "$@" ;;
+      "") command pacman -h ;;
+      *) command pacman "$@" ;;
+    esac
+  }
+else
+  echo "No known package manager found"
+fi
 
 # Archive Extraction
 extract() {
